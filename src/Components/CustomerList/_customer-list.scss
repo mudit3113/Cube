@@ -1,24 +1,35 @@
-.customer-list-container{
+.customer-list-container {
     margin-top: 0;
-    margin-bottom:0;
-    height:100%;
-    overflow-y:scroll;  
-  
-  
-    div{
-        margin-top:0;
-        padding:0;
-        height:25%;
+    margin-bottom: 0;
+    height: 100%;
+ 
+    div {
+        margin-top: 0;
+        padding: 20px;
+        height: 25%;
         border-bottom: 1px solid black;
+        text-align:left;
 
-        h3{
-            color:black;
-            font-weight:700;
-            margin:0;
+
+        h3 {
+            color: black;
+            font-weight: 700;
+            margin: 0;
+            padding:10px;
+
+        }
+
+        p{
+            color: black;
+            font-weight: 500;
+            margin: 0;
+            padding:10px;
+
         }
     }
-    .selected-customer{
-        background-color:lightgrey;
+
+    .selected-customer {
+        background-color: lightgrey;
+
     }
 }
-

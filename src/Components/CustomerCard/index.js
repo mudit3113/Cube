@@ -16,9 +16,10 @@ export const CustomerCard = () => {
                 <div className="customer-card-details">
                     {customer.map((item, index) => (
                         <div key={index}>
-                            <p>Name: {item.name}</p>
-                            <p>Title: {item.title}</p>
-                            <p>  Address:{item.address}</p>
+                            <h3> {item.name} details here:</h3>
+                            <p>Name: <span>{item.name}</span></p>
+                            <p>Title: <span>{item.title}</span></p>
+                            <p>Address:<span>{item.address}</span></p>
                         </div>
                     ))}
 

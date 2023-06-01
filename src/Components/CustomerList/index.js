@@ -26,10 +26,10 @@ export const CustomerList = () => {
                     <div 
                     key={index} 
                     onClick={() => setSelectedCustomer(customer.id)} 
-                    className={selectedCustomerId == customer.id ? "selected-customer" : ""}
+                    className={selectedCustomerId == customer.id ? "selected-customer": ""}
                     >
-                        <h3>{customer.name}</h3>
-                        <p> {customer.title}</p>
+                        <h3 className='selected-customer-name'>{customer.name}</h3>
+                        <p className='selected-customer-title'> {customer.title}</p>
                     </div>
                 ))}
 
