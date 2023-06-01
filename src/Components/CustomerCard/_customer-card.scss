@@ -5,7 +5,18 @@
 
     .customer-card-details {
         background-color: lightgrey;
-        height: 20%;
+        height: 26.5%;
+        border-bottom:1px black solid;
+        text-align: center;
+        font-weight: 700;
+
+        p{
+            font-weight: 300;
+            span{
+                font-weight: 700;
+            }
+        }
+
     }
 
    
