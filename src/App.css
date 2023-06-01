@@ -1,0 +1,16 @@
+.customer-container {
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  height:100vh;
+}
+
+.customer-list {
+  flex: 30%;
+  overflow-y: scroll;
+}
+
+.customer-card {
+  flex: 70%;
+  overflow-y:hidden;
+}
