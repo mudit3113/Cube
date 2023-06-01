@@ -8,7 +8,38 @@
         height: 20%;
     }
 
-   
+    .image-container {
+        background-color: lightgrey;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            .image-cell {
+                background-color: #ddd;
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 10%;
+
+                .image-cell-avatar {
+                    width: 150px;
+                    height: 150px;
+                    margin-bottom: 10px;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 10%;
+                }
+
+
+
+            }
+        }
+    }
 
 }
-
