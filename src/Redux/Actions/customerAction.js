@@ -39,28 +39,29 @@ export const setCustomer = (id) => ({
 
 
 export const fetchRandomImages = () => {
-    return (dispatch) => {
-        axios
-            .get('https://jsonplaceholder.typicode.com/photos')
-            .then((response) => {
-                const images = response.data;
-                const randomIndices = [];
-                while (randomIndices.length < 9) {
-                    const randomIndex = Math.floor(Math.random() * images.length);
-                    if (!randomIndices.includes(randomIndex)) {
-                        randomIndices.push(randomIndex);
-                    }
+    return async (dispatch) => {
+        try {
+            const response = await fetch('https://picsum.photos/v2/list?page=1&limit=1000')
+            const data = await response.json(); // Fetch and parse the response JSON
+            const images = data;
+            // console.log("images", images)
+            const randomIndices = [];
+            while (randomIndices.length < 9) {
+                const randomIndex = Math.floor(Math.random() * images.length);
+                if (!randomIndices.includes(randomIndex)) {
+                    randomIndices.push(randomIndex);
                 }
+            }
+            // array for getting the 9 random images
+            const randomImages = randomIndices.map((index) => images[index]);
+            console.log("randomImages", randomImages);
+            dispatch(fetchImagesSuccess(randomImages))
 
-                // array for getting the 9 random images
-                const randomImages = randomIndices.map((index) => images[index]);
-                dispatch(fetchImagesSuccess(randomImages))
-            })
-            .catch((error) => {
-                dispatch(fetchImagesFailure(error.message));
-            });
-
-    };
+        }
+        catch (error) {
+            dispatch(fetchImagesFailure(error.message));
+        }
+    }
 
 }
 //defining the dispatch action for fetchImageSuccess
