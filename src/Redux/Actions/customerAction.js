@@ -72,6 +72,7 @@ export const fetchImagesSuccess = (images) => {
 };
 
 //defining the dispatch action for fetchImageSuccess
+
 export const fetchImagesFailure = (error) => {
     return {
         type: 'FETCH_CUSTOMERS_FAILURE',

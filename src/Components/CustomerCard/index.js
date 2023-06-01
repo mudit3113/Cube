@@ -13,18 +13,11 @@ export const CustomerCard = () => {
     const images = useSelector((state) => state.images);
     console.log("images", images);
     // console.log("customer",customer);
+  
     // using useEffect hook to call sideEffect - fetchAPI 
-
-    useEffect(() => {
-        const fetchImagesInterval = () => {
+        useEffect(() => {
             dispatch(fetchRandomImages());
-            setTimeout(fetchImagesInterval,10000);
-        }
-        fetchImagesInterval();
-        return()=> {
-            clearTimeout()
-        }
-    }, [])
+        },[])
 
     return (
         <>
@@ -35,7 +28,7 @@ export const CustomerCard = () => {
                             <p>Name: {item.name}</p>
                             <p>Title: {item.title}</p>
                             <p>  Address:{item.address}</p>
-                            <hr />
+
                         </div>
                     ))}
 
@@ -44,7 +37,7 @@ export const CustomerCard = () => {
                     <div className="image-grid">
                         {images.map((image) => (
                             <div className="image-cell">
-                                <img  className="image-cell-avatar" src={image.url} alt={image.title}/>
+                                <img className="image-cell-avatar" src={image.url} alt={image.title} />
                             </div>
                         ))}
                     </div>

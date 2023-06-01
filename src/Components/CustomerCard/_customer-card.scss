@@ -4,12 +4,12 @@
     height: 100vh;
 
     .customer-card-details {
-        background-color: lightblue;
+        background-color: lightgrey;
         height: 20%;
     }
 
     .image-container {
-        background-color: lightgray;
+        background-color: lightgrey;
         height: 80%;
         display: flex;
         align-items: center;
@@ -23,18 +23,19 @@
 
             .image-cell {
                 background-color: #ddd;
-                padding: 20px;
                 text-align: center;
                 border: 1px solid black;
+                border-radius: 10%;
 
                 .image-cell-avatar {
                     width: 150px;
                     height: 150px;
-                    border-radius: 50%;
                     margin-bottom: 10px;
                     display: block;
                     margin: 0 auto;
+                    border-radius: 10%;
                 }
+
 
 
             }
